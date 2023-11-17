@@ -1,25 +1,23 @@
-
+package com.code.app.Matrix;
 /*
 
-Given a matrix of size N x N. Print the elements of the matrix in the snake like pattern
+Given a matrix of size N x N. Print the elements of the matrix in the Z like pattern
  */
 
-public class Print_Matrix_in_snake_Pattern {
-    public static void printSnakePattern(int[][] matrix) {
+public class Print_Matrix_in_Z_Pattern {
+
+    public static void printZPattern(int[][] matrix) {
         int rows = matrix.length;
         int cols = matrix[0].length;
 
         for (int i = 0; i < rows; i++) {
-            if (i % 2 == 0) {
-                // Left to right for even rows
+            // Print the first and last row
+            if (i == 0 || i == rows - 1) {
                 for (int j = 0; j < cols; j++) {
                     System.out.print(matrix[i][j] + " ");
                 }
-            } else {
-                // Right to left for odd rows
-                for (int j = cols - 1; j >= 0; j--) {
-                    System.out.print(matrix[i][j] + " ");
-                }
+            } else { // Print the diagonal line
+                System.out.print(matrix[i][cols - i - 1] + " ");
             }
         }
     }
@@ -32,7 +30,7 @@ public class Print_Matrix_in_snake_Pattern {
                 {13, 14, 15, 16}
         };
 
-        printSnakePattern(matrix);
+        printZPattern(matrix);
     }
 }
 
