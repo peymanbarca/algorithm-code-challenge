@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class Find_duplicates_in _small_ranged_array {
+public class Find_duplicates_in_small_ranged_array {
     public static List<Integer> findDuplicateElements(int[] a) {
         HashSet<Integer> seen = new HashSet<>();
         HashSet<Integer> duplicates = new HashSet<>();
@@ -28,7 +28,6 @@ public class Find_duplicates_in _small_ranged_array {
             result.add(-1);
         }
 
-        result.sort(null);
         return result;
     }
 
